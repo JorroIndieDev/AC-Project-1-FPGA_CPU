@@ -23,9 +23,9 @@ This project implements a basic processor with a minimal instruction set using V
 - [ ] Flag Register
 - [ ] Contador do Programa (PC) ??
 - [ ] PC MUX
-- [ ] Memoria de Instrucoes
+- [ ] Instruction Memory
 - [ ] RAM
-- [ ] Decoding ROM
+- [ ] ROM Decoder
 
 [license-url]: https://github.com/JorroIndieDev/AC-Project-1-FPGA_CPU/blob/main/LICENSE
 [license-shield]: https://img.shields.io/badge/License-MIT-blue.svg
