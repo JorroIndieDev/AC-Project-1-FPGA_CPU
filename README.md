@@ -1,4 +1,4 @@
-[![Unlicense License][license-shield]][license-url]
+[![Unlicense License][license-shield]](https://github.com/JorroIndieDev/AC-Project-1-FPGA_CPU/blob/main/LICENSE)
 # AC-Project-1-FPGA_CPU
 First Project for Subject: Computer Architecture.
 
