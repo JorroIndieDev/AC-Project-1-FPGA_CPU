@@ -5,7 +5,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity ALU is
     Port ( a : in STD_LOGIC;
            b : in STD_LOGIC;
-           op : in std_logic_vector(8 downto 0);
+           op : in std_logic_vector(3 downto 0);
            cin : in STD_LOGIC;
            res : out STD_LOGIC;
            cout : out STD_LOGIC);
