@@ -1,7 +1,9 @@
 # AC-Project-1-FPGA_CPU
-Project for university
+First Project for Subject: Computer Architecture.
 
-## Goal
+This project implements a basic processor with a minimal instruction set using VHDL. The design is developed in Vivado ML Edition, simulated with Vivado Simulator, and tested on an Artix-7 FPGA. The processor operates with 8-bit data and follows the provided block diagram.
+
+## Architecture
 
 ![CPU architeture](MotherBoard.png)
 
