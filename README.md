@@ -3,7 +3,7 @@ Project for university
 
 ## Goal
 
-![CPU architeture]
+![CPU architeture](MotherBoard.png)
 
 ### Tasks To-Do
 
