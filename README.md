@@ -1,4 +1,4 @@
-[![MIT License][license-shield]][https://github.com/JorroIndieDev/AC-Project-1-FPGA_CPU/blob/main/LICENSE]
+[![Unlicense License][license-shield]][license-url]
 # AC-Project-1-FPGA_CPU
 First Project for Subject: Computer Architecture.
 
@@ -26,3 +26,5 @@ This project implements a basic processor with a minimal instruction set using V
 - [ ] Memoria de Instrucoes
 - [ ] RAM
 - [ ] Decoding ROM
+
+[license-url] : https://github.com/JorroIndieDev/AC-Project-1-FPGA_CPU/blob/main/LICENSE
