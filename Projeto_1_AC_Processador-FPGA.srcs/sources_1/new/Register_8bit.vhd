@@ -22,4 +22,6 @@ begin
         end if;
     end process;
 
+    dataOut <= reg;
+
 end Behavioural;

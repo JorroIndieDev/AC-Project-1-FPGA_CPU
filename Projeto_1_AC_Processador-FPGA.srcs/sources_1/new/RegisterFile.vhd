@@ -4,9 +4,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity RegisterFile is
 Port( 
     clk, WE : in std_logic;
-    bitSel : in std_logic_vector(2 downto 0);
+    SEL_REG1, SEL_REG2 : in std_logic_vector(2 downto 0);
     data : in std_logic_vector(7 downto 0);
-    dataOut : out std_logic_vector(7 downto 0)
+    Operando1, Operando2 : out std_logic_vector(7 downto 0)
     );
 end RegisterFile;
 
@@ -19,12 +19,12 @@ architecture Behavioral of RegisterFile is
     signal WE_R0, WE_R1, WE_R2, WE_R3, WE_R4, WE_R5 : std_logic;
 begin
 
-    REG0 : Register_8bit port map(clk, We_R0, data, R0);
-    REG1 : Register_8bit port map(clk, We_R1, data, R1);
-    REG2 : Register_8bit port map(clk, We_R2, data, R2);
-    REG3 : Register_8bit port map(clk, We_R3, data, R3);
-    REG4 : Register_8bit port map(clk, We_R4, data, R4);
-    REG5 : Register_8bit port map(clk, We_R5, data, R5);
+    REG0 : Register_8bit port map(clk => clk, WE => We_R0, data => data, dataOut => R0);
+    REG1 : Register_8bit port map(clk => clk, WE => We_R1, data => data, dataOut => R1);
+    REG2 : Register_8bit port map(clk => clk, WE => We_R2, data => data, dataOut => R2);
+    REG3 : Register_8bit port map(clk => clk, WE => We_R3, data => data, dataOut => R3);
+    REG4 : Register_8bit port map(clk => clk, WE => We_R4, data => data, dataOut => R4);
+    REG5 : Register_8bit port map(clk => clk, WE => We_R5, data => data, dataOut => R5);
 
     process(clk)
     begin
@@ -36,7 +36,7 @@ begin
             WE_R4 <= '0';
             WE_R5 <= '0';
             if WE = '1' then
-                case bitSel is
+                case SEL_REG1 is
                     when "000" => WE_R0 <= '1';
                     when "001" => WE_R1 <= '1';
                     when "010" => WE_R2 <= '1';
@@ -49,12 +49,21 @@ begin
         end if ;
     end process;
 
-    with bitSel select
-        dataOut <=  R0 when "000",
-                    R0 when "001",
-                    R0 when "010",
-                    R0 when "011",
-                    R0 when "100",
-                    R0 when "101",
+    with SEL_REG1 select
+        Operando1 <= R0 when "000",
+                    R1 when "001",
+                    R2 when "010",
+                    R3 when "011",
+                    R4 when "100",
+                    R5 when "101",
+                    (others => '0') when others;
+
+    with SEL_REG2 select
+        Operando2 <= R0 when "000",
+                    R1 when "001",
+                    R2 when "010",
+                    R3 when "011",
+                    R4 when "100",
+                    R5 when "101",
                     (others => '0') when others;
 end Behavioral;
