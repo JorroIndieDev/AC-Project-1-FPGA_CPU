@@ -28,4 +28,4 @@ This project implements a basic processor with a minimal instruction set using V
 - [ ] Decoding ROM
 
 [license-url]: https://github.com/JorroIndieDev/AC-Project-1-FPGA_CPU/blob/main/LICENSE
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/badge/License-MIT-blue.svg
