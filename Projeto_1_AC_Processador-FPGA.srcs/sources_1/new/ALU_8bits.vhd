@@ -2,22 +2,22 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity ALU_8bits is
-    Port ( a    : in  STD_LOGIC_VECTOR (7 downto 0);
-           b    : in  STD_LOGIC_VECTOR (7 downto 0);
-           op   : in  STD_LOGIC_VECTOR (3 downto 0);
-           cin  : in  STD_LOGIC;  
-           res  : out STD_LOGIC_VECTOR (7 downto 0);
+    Port ( a : in  STD_LOGIC_VECTOR (7 downto 0);
+           b : in  STD_LOGIC_VECTOR (7 downto 0);
+           op : in  STD_LOGIC_VECTOR (3 downto 0);
+           cin : in  STD_LOGIC;  
+           res : out STD_LOGIC_VECTOR (7 downto 0);
            cout : out STD_LOGIC);
 end ALU_8bits;
 
 architecture Structural of ALU_8bits is
 
     component ALU 
-        Port ( a    : in  STD_LOGIC;
-               b    : in  STD_LOGIC;
-               op   : in  STD_LOGIC_VECTOR (3 downto 0);
-               cin  : in  STD_LOGIC;
-               res  : out STD_LOGIC;
+        Port ( a : in  STD_LOGIC;
+               b : in  STD_LOGIC;
+               op : in  STD_LOGIC_VECTOR (3 downto 0);
+               cin : in  STD_LOGIC;
+               res : out STD_LOGIC;
                cout : out STD_LOGIC);
     end component;
 
