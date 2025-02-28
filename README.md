@@ -8,7 +8,7 @@ This project implements a basic processor with a minimal instruction set using V
 
 ![CPU architeture](MotherBoard.png)
 
-## Tasks To-Do
+## To-Do Tasks
 
 - [ ] Periferals Manager
 - [x] ~~Register MUX~~ ✅ 2025-02-28
