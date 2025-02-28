@@ -1,43 +1,30 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 02/27/2025 09:44:11 PM
--- Design Name: 
--- Module Name: MUX2bit - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
-
+-- keeping the names given by the image and the project description
+-- to keep it easier to cross reference
 entity MUX2bit is
---  Port ( );
+ Port (
+    SEL_R : in std_logic_vector(1 downto 0);
+    Dados_M, Dados_IN, Resultado, Constante : in std_logic_vector(7 downto 0);
+    Dados_R : out std_logic_vector(7 downto 0)
+ );
 end MUX2bit;
 
 architecture Behavioral of MUX2bit is
-
+    signal data : std_logic_vector(7 downto 0);
 begin
 
+    process
+    begin
+        case SEL_R is
+            when "00" => data <= Resultado;
+            when "01" => data <= Dados_IN;
+            when "10" => data <= Dados_M;
+            when "11" => data <= Constante;
+        end case;
+    end process;
+    
+    Dados_R <= data;
 
 end Behavioral;
