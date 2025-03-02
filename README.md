@@ -10,7 +10,7 @@ This project implements a basic processor with a minimal instruction set using V
 
 ## To-Do Tasks
 
-- [ ] Periferals Manager
+- [x] ~~Periferals Manager~~ ✅ 2025-03-02
 - [x] ~~Register MUX~~ ✅ 2025-02-28
 - [x] ~~Register File~~ ✅ 2025-02-27
 	- [x] ~~Individual Register~~ ✅ 2025-02-25
