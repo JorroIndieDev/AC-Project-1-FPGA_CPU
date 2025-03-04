@@ -5,10 +5,10 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity ALU_8bits is
     Port (
-        A        : in  STD_LOGIC_VECTOR(7 downto 0);  
-        B        : in  STD_LOGIC_VECTOR(7 downto 0);  
-        Sel      : in  STD_LOGIC_VECTOR(3 downto 0);  
-        Result   : out STD_LOGIC_VECTOR(7 downto 0);  
+        A : in  STD_LOGIC_VECTOR(7 downto 0);  
+        B : in  STD_LOGIC_VECTOR(7 downto 0);  
+        Sel : in  STD_LOGIC_VECTOR(3 downto 0);  
+        Result : out STD_LOGIC_VECTOR(7 downto 0);  
         COMP_FLAG: out STD_LOGIC_VECTOR(4 downto 0)   
     );
 end ALU_8bits;
@@ -31,7 +31,6 @@ begin
 
     process(Temp_Result, Carry)
     begin
-        -- A < B 
         COMP_FLAG(0) <= Temp_Result(7); 
         COMP_FLAG(4) <= NOT Temp_Result(7); 
 
