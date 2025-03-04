@@ -1,54 +1,49 @@
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity ALU is
-    Port ( a : in STD_LOGIC;
-           b : in STD_LOGIC;
-           op : in std_logic_vector(3 downto 0);
-           cin : in STD_LOGIC;
-           res : out STD_LOGIC;
-           cout : out STD_LOGIC);
+    Port (
+        A       : in  STD_LOGIC;  
+        B       : in  STD_LOGIC;
+        Cin     : in  STD_LOGIC;
+        Sel     : in  STD_LOGIC_VECTOR(3 downto 0); 
+        Result  : out STD_LOGIC;
+        Cout    : out STD_LOGIC 
+    );
 end ALU;
 
-architecture Structural of ALU is
-
-component Full_Adder Port(a,b,cin : in std_logic;
-                          sum, cout : out std_logic);
-end component;
-
-signal SumRes, AndRes, NandRes, OrRes, NorRes, XorRes, XnorRes, SubB : STD_LOGIC;
-    signal CoutSum : STD_LOGIC; 
-
-
+architecture Behavioral of ALU is
+    signal Sum, Cout_internal : STD_LOGIC; 
 begin
 
-    subB <= b xor op(0);
-    
-    FA: Full_Adder port map (A, SubB, Cin, SumRes, CoutSum);
-    
-    AndRes <= a and b;
-    NandRes <= a nand b;
-    OrRes <= a or b;
-    NorRes <= a nor b;
-    XorRes <= a xor b;
-    XnorRes <= a xnor b;
+    Adder: entity work.Full_Adder
+        port map (
+            A   => A,
+            B   => B,
+            Cin => Cin,
+            Sub => Sel(0),  -- Sel(0) = 1, ativa a subtração
+            Sum => Sum,
+            Cout => Cout_internal
+        );
 
-    process (Op, SumRes, AndRes, NandRes, OrRes, NorRes, XorRes, XnorRes)
+    process (A, B, Sum, Cout_internal, Sel)
     begin
-        case Op is
-            when "0000" => res <= SumRes; --soma
-            when "0001" => res <= SumRes; --subtracao
-            when "0010" => res <= AndRes;  
-            when "0011" => res <= NandRes;   
-            when "0100" => res <= OrRes;  
-            when "0101" => res <= NorRes;  
-            when "0110" => res <= XorRes;  
-            when "0111" => res <= XnorRes; 
-            when others => res <= '0';     
+        case Sel is
+            when "0000" => Result <= Sum;         
+            when "0001" => Result <= Sum;         
+            when "0010" => Result <= A AND B;     
+            when "0011" => Result <= NOT (A AND B); 
+            when "0100" => Result <= A OR B;      
+            when "0101" => Result <= NOT (A OR B); 
+            when "0110" => Result <= A XOR B;     
+            when "0111" => Result <= NOT (A XOR B); 
+            when others => Result <= '0'; 
         end case;
-    end process;
-    
-    Cout <= CoutSum when (Op = "0000" or Op = "0001") else '0';
 
-end Structural;
+        if (Sel = "0000" or Sel = "0001") then
+            Cout <= Cout_internal;
+        else
+            Cout <= '0';
+        end if;
+    end process;
+end Behavioral;
