@@ -3,10 +3,10 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity Full_Adder is
     Port (
-        A   : in  STD_LOGIC;  
-        B   : in  STD_LOGIC;  
-        Cin : in  STD_LOGIC; 
-        Sub : in  STD_LOGIC;  -- 0 para soma, 1 para subtração
+        A : in  STD_LOGIC;  
+        B : in  STD_LOGIC;  
+        Cin: in  STD_LOGIC; 
+        Sub: in  STD_LOGIC;  -- 0 para soma, 1 para subtração
         Sum : out STD_LOGIC; 
         Cout: out STD_LOGIC   
     );
