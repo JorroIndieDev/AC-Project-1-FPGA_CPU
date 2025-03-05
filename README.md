@@ -10,22 +10,22 @@ This project implements a basic processor with a minimal instruction set using V
 
 ## To-Do Tasks
 
-- [x] ~~Periferals Manager~~ ✅ 2025-03-02
-- [x] ~~Register MUX~~ ✅ 2025-02-28
-- [x] ~~Register File~~ ✅ 2025-02-27
-	- [x] ~~Individual Register~~ ✅ 2025-02-25
-	- [x] ~~Register File~~ (Made it with a selector "built in") ✅ 2025-02-25
-- [ ] ALU
-	- [x] ~~AND, OR, XOR, NOT~~ ✅ 2025-02-25
-	- [x] ~~Comparador~~ ✅ 2025-02-25
-	- [ ] Somador
-	- [x] ~~MUX~~ ✅ 2025-02-25
-- [ ] Flag Register
-- [ ] Contador do Programa (PC) ??
-- [ ] PC MUX
-- [ ] Instruction Memory
-- [ ] RAM
-- [ ] ROM Decoder
+- [x] ~~Periferals Manager~~ 
+- [x] ~~Register MUX~~ 
+- [x] ~~Register File~~ 
+	- [x] ~~Individual Register~~ 
+	- [x] ~~Register File~~ 
+- [X] ~~ALU~~
+	- [x] ~~AND, OR, XOR, NOT~~ 
+	<!-- - [x] ~~Comparador~~ ✅ 2025-02-25 -->
+	- [x] ~~Full adder~~
+	- [x] ~~MUX~~ 
+- [X] ~~Flag Register~~
+- [x] ~~Contador do Programa (PC)~~ ??
+- [X] ~~PC MUX~~
+- [X] ~~Instruction Memory~~
+- [X] ~~RAM~~
+- [X] ~~ROM Decoder~~
 
 
 [license-url]: https://github.com/JorroIndieDev/AC-Project-1-FPGA_CPU/blob/main/LICENSE
