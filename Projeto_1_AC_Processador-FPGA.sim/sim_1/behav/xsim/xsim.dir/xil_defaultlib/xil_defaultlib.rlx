@@ -2,7 +2,20 @@
 2020.2
 May  7 2023
 15:24:31
+C:/Users/goliv/Documents/_UMA_/AC/Projetos/Projeto_1/AC-Project-1-FPGA_CPU/Projeto_1_AC_Processador-FPGA.srcs/sim_1/new/ALU_8bits_tb.vhd,1741279043,vhdl,,,,alu_8bits_tb,,,,,,,,
+C:/Users/goliv/Documents/_UMA_/AC/Projetos/Projeto_1/AC-Project-1-FPGA_CPU/Projeto_1_AC_Processador-FPGA.srcs/sim_1/new/CPU_TestBench.vhd,1741277802,vhdl,,,,cpu_testbench,,,,,,,,
 C:/Users/goliv/Documents/_UMA_/AC/Projetos/Projeto_1/AC-Project-1-FPGA_CPU/Projeto_1_AC_Processador-FPGA.srcs/sim_1/new/Peripheral_unitTest.vhd,1740947296,vhdl,,,,peripheral_manager_tb,,,,,,,,
-C:/Users/goliv/Documents/_UMA_/AC/Projetos/Projeto_1/AC-Project-1-FPGA_CPU/Projeto_1_AC_Processador-FPGA.srcs/sources_1/new/Peripheral_Manager.vhd,1740947558,vhdl,,,,peripheral_manager,,,,,,,,
-C:/Users/goliv/Documents/_UMA_/AC/Projetos/Projeto_1/AC-Project-1-FPGA_CPU/Projeto_1_AC_Processador-FPGA.srcs/sources_1/new/RegisterFile.vhd,1740693470,vhdl,,,,registerfile,,,,,,,,
+C:/Users/goliv/Documents/_UMA_/AC/Projetos/Projeto_1/AC-Project-1-FPGA_CPU/Projeto_1_AC_Processador-FPGA.srcs/sources_1/new/ALU.vhd,1741307477,vhdl,C:/Users/goliv/Documents/_UMA_/AC/Projetos/Projeto_1/AC-Project-1-FPGA_CPU/Projeto_1_AC_Processador-FPGA.srcs/sources_1/new/ALU_8bits.vhd,,,alu,,,,,,,,
+C:/Users/goliv/Documents/_UMA_/AC/Projetos/Projeto_1/AC-Project-1-FPGA_CPU/Projeto_1_AC_Processador-FPGA.srcs/sources_1/new/ALU_8bits.vhd,1741267835,vhdl,,,,alu_8bits,,,,,,,,
+C:/Users/goliv/Documents/_UMA_/AC/Projetos/Projeto_1/AC-Project-1-FPGA_CPU/Projeto_1_AC_Processador-FPGA.srcs/sources_1/new/CPU.vhd,1741308178,vhdl,,,,cpu,,,,,,,,
+C:/Users/goliv/Documents/_UMA_/AC/Projetos/Projeto_1/AC-Project-1-FPGA_CPU/Projeto_1_AC_Processador-FPGA.srcs/sources_1/new/Flag_Register.vhd,1741206214,vhdl,,,,flag_register,,,,,,,,
+C:/Users/goliv/Documents/_UMA_/AC/Projetos/Projeto_1/AC-Project-1-FPGA_CPU/Projeto_1_AC_Processador-FPGA.srcs/sources_1/new/Full_Adder.vhd,1741200147,vhdl,C:/Users/goliv/Documents/_UMA_/AC/Projetos/Projeto_1/AC-Project-1-FPGA_CPU/Projeto_1_AC_Processador-FPGA.srcs/sources_1/new/ALU.vhd,,,full_adder,,,,,,,,
+C:/Users/goliv/Documents/_UMA_/AC/Projetos/Projeto_1/AC-Project-1-FPGA_CPU/Projeto_1_AC_Processador-FPGA.srcs/sources_1/new/MUX_PC.vhd,1741204828,vhdl,,,,mux_pc,,,,,,,,
+C:/Users/goliv/Documents/_UMA_/AC/Projetos/Projeto_1/AC-Project-1-FPGA_CPU/Projeto_1_AC_Processador-FPGA.srcs/sources_1/new/MUX_R.vhd,1741307679,vhdl,,,,mux_r,,,,,,,,
+C:/Users/goliv/Documents/_UMA_/AC/Projetos/Projeto_1/AC-Project-1-FPGA_CPU/Projeto_1_AC_Processador-FPGA.srcs/sources_1/new/Memoria_dados.vhd,1741200147,vhdl,,,,memoria_dados,,,,,,,,
+C:/Users/goliv/Documents/_UMA_/AC/Projetos/Projeto_1/AC-Project-1-FPGA_CPU/Projeto_1_AC_Processador-FPGA.srcs/sources_1/new/Memoria_instrucoes.vhd,1741276956,vhdl,,,,memoria_instrucoes,,,,,,,,
+C:/Users/goliv/Documents/_UMA_/AC/Projetos/Projeto_1/AC-Project-1-FPGA_CPU/Projeto_1_AC_Processador-FPGA.srcs/sources_1/new/Peripheral_Manager.vhd,1741271231,vhdl,,,,peripheral_manager,,,,,,,,
+C:/Users/goliv/Documents/_UMA_/AC/Projetos/Projeto_1/AC-Project-1-FPGA_CPU/Projeto_1_AC_Processador-FPGA.srcs/sources_1/new/ROM_decoder.vhd,1741202937,vhdl,,,,rom_decoder,,,,,,,,
 C:/Users/goliv/Documents/_UMA_/AC/Projetos/Projeto_1/AC-Project-1-FPGA_CPU/Projeto_1_AC_Processador-FPGA.srcs/sources_1/new/Register_8bit.vhd,1740693204,vhdl,,,,register_8bit,,,,,,,,
+C:/Users/goliv/Documents/_UMA_/AC/Projetos/Projeto_1/AC-Project-1-FPGA_CPU/Projeto_1_AC_Processador-FPGA.srcs/sources_1/new/Register_File.vhd,1741275456,vhdl,,,,register_file,,,,,,,,
+C:/Users/goliv/Documents/_UMA_/AC/Projetos/Projeto_1/AC-Project-1-FPGA_CPU/Projeto_1_AC_Processador-FPGA.srcs/sources_1/new/pc.vhd,1741200147,vhdl,,,,program_counter,,,,,,,,

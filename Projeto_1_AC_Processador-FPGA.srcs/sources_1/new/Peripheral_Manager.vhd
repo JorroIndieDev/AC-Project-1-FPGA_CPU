@@ -6,7 +6,8 @@ entity Peripheral_Manager is
  Port ( 
         P_in, operando1: in std_logic_vector(7 downto 0); 
         ESCR_P, clk: in std_logic;
-        P_out, Dados_IN : out std_logic_vector(7 downto 0));
+        P_out, Dados_IN : out std_logic_vector(7 downto 0)
+    );
 end Peripheral_Manager;
 
 architecture Behavioral of Peripheral_Manager is

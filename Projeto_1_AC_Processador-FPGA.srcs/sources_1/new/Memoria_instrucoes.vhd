@@ -1,7 +1,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.STD_LOGIC_ARITH.ALL;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 entity Memoria_instrucoes is
     Port (
@@ -19,9 +18,9 @@ architecture Behavioral of Memoria_instrucoes is
 begin
     process(Endereco)
     begin
-        opcode    <= memoria(conv_integer(Endereco))(18 downto 14);
-        SEL_REG1  <= memoria(conv_integer(Endereco))(13 downto 11);
-        SEL_REG2  <= memoria(conv_integer(Endereco))(10 downto 8);
-        Constante <= memoria(conv_integer(Endereco))(7 downto 0);
+        opcode    <= memoria(to_integer(unsigned(Endereco)))(18 downto 14);
+        SEL_REG1  <= memoria(to_integer(unsigned(Endereco)))(13 downto 11);
+        SEL_REG2  <= memoria(to_integer(unsigned(Endereco)))(10 downto 8);
+        Constante <= memoria(to_integer(unsigned(Endereco)))(7 downto 0);
     end process;
 end Behavioral;

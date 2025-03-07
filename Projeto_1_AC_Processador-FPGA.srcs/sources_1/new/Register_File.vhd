@@ -1,16 +1,16 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-entity RegisterFile is
-Port( 
-    clk, WE : in std_logic;
-    SEL_REG1, SEL_REG2 : in std_logic_vector(2 downto 0);
-    data : in std_logic_vector(7 downto 0);
-    Operando1, Operando2 : out std_logic_vector(7 downto 0)
-    );
-end RegisterFile;
+entity Register_File is
+    Port( 
+        clk, WE : in std_logic;
+        SEL_REG1, SEL_REG2 : in std_logic_vector(2 downto 0);
+        data : in std_logic_vector(7 downto 0);
+        Operando1, Operando2 : out std_logic_vector(7 downto 0)
+        );
+end Register_File;
 
-architecture Behavioral of RegisterFile is
+architecture Behavioral of Register_File is
     component Register_8bit
     port(clk, WE : std_logic; data : in std_logic_vector(7 downto 0); dataOut : out std_logic_vector(7 downto 0));
     end component;

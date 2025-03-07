@@ -1,0 +1,2 @@
+Breakpoint File Version 1.0
+32,true,"C:/Users/goliv/Documents/_UMA_/AC/Projetos/Projeto_1/AC-Project-1-FPGA_CPU/Projeto_1_AC_Processador-FPGA.srcs/sources_1/new/pc.vhd"

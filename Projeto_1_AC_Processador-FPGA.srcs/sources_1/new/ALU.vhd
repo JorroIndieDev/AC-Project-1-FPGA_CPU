@@ -30,7 +30,7 @@ begin
     begin
         case Sel is
             when "0000" => Result <= Sum;         
-            when "0001" => Result <= Sum;         
+            when "0001" => Result <= Sum;            
             when "0010" => Result <= A AND B;     
             when "0011" => Result <= NOT (A AND B); 
             when "0100" => Result <= A OR B;      

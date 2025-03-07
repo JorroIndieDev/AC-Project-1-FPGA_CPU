@@ -42,7 +42,7 @@ begin
         else
             COMP_FLAG(1) <= Temp_Result(7); -- A <= B ou A < B
             COMP_FLAG(2) <= '0'; -- A = B 
-            COMP_FLAG(3) <= NOT (Temp_Result(7)); -- A >= B ou A >= B
+            COMP_FLAG(3) <= NOT (Temp_Result(7)); -- A >= B ou A > B
         end if;
         
     end process;
