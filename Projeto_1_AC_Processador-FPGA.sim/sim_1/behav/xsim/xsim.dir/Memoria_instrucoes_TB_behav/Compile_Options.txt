@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "Memoria_instrucoes_TB_behav" "xil_defaultlib.Memoria_instrucoes_TB" -log "elaborate.log" 

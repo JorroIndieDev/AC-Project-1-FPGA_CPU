@@ -18,7 +18,7 @@ begin
 	process(CLK)
 	begin
 		if rising_edge(CLK) then
-			if ESCR_F = '1' then
+			if ESCR_F = '1' and COMP_FLAG /= "UUUUU" then
 				stored_flag <= COMP_FLAG;
 			end if;
 		end if;

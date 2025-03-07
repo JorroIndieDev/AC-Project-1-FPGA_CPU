@@ -117,21 +117,16 @@ architecture Structural of CPU is
 	end component;
 
 
--- Signals
-	signal ENDERECO         : std_logic_vector(7 downto 0);
-	signal CONSTANTE        : std_logic_vector(7 downto 0);
-	signal OPERANDO1, OPERANDO2 : std_logic_vector(7 downto 0);
-	signal RESULTADO_ALU    : std_logic_vector(7 downto 0);
-	signal COMP_FLAG        : std_logic_vector(4 downto 0);
-	signal S_FLAG           : std_logic;
-	signal ESCR_PC, ESCR_F, ESCR_R, ESCR_P, WR : std_logic;
-	signal SEL_PC           : std_logic_vector(2 downto 0);
-	signal SEL_F            : std_logic_vector(2 downto 0);
-	signal SEL_ALU          : std_logic_vector(3 downto 0);
-	signal SEL_R            : std_logic_vector(1 downto 0);
-	signal SEL_REG1, SEL_REG2 : std_logic_vector(2 downto 0);
-	signal Opcode           : std_logic_vector(4 downto 0);
-	signal Dados_R, Dados_M, Dados_IN : std_logic_vector(7 downto 0);
+	-- Signals
+	signal ENDERECO, CONSTANTE, OPERANDO1, OPERANDO2, RESULTADO_ALU, Dados_R, Dados_M, Dados_IN : std_logic_vector(7 downto 0) := (others => '0');
+	signal COMP_FLAG : std_logic_vector(4 downto 0) := (others => '0');
+	signal S_FLAG, ESCR_PC, ESCR_F, ESCR_R, ESCR_P, WR : std_logic := '0';
+	signal SEL_PC, SEL_F : std_logic_vector(2 downto 0) := (others => '0');
+	signal SEL_ALU : std_logic_vector(3 downto 0) := (others => '0');
+	signal SEL_R : std_logic_vector(1 downto 0) := (others => '0');
+	signal SEL_REG1, SEL_REG2 : std_logic_vector(2 downto 0) := (others => '0');
+	signal Opcode : std_logic_vector(4 downto 0) := (others => '0');
+
 	
 	begin
 	
@@ -169,7 +164,6 @@ architecture Structural of CPU is
 				ESCR_F  => ESCR_F,
 				WR      => WR
 			);
-
 
 		---------- 2.7 MUX_PC
 		MuxPC : MUX_PC

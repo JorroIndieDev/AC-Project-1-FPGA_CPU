@@ -17,7 +17,7 @@ architecture testbench of CPU_TestBench is
 	-- Signals for connecting to CPU
 	signal PIN_tb  : std_logic_vector(7 downto 0) := (others => '0');
 	signal POUT_tb : std_logic_vector(7 downto 0);
-	signal clk_tb  : std_logic := '0';
+	signal clk_tb  : std_logic := '1';
 	signal reset_tb : std_logic := '1';
 
 	-- Clock period
@@ -37,9 +37,9 @@ begin
 	-- Clock process
 	process
 	begin
-		clk_tb <= '0';
-		wait for clk_period / 2;
 		clk_tb <= '1';
+		wait for clk_period / 2;
+		clk_tb <= '0';
 		wait for clk_period / 2;
 	end process;
 
