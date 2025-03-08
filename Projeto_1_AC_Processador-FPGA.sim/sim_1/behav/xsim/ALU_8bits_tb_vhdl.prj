@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Projeto_1_AC_Processador-FPGA.srcs/sources_1/new/Full_Adder.vhd" \
+"../../../../Projeto_1_AC_Processador-FPGA.srcs/sources_1/new/ALU.vhd" \
+"../../../../Projeto_1_AC_Processador-FPGA.srcs/sources_1/new/ALU_8bits.vhd" \
+"../../../../Projeto_1_AC_Processador-FPGA.srcs/sim_1/new/ALU_8bits_tb.vhd" \
+
+# Do not sort compile order
+nosort

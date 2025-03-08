@@ -44,22 +44,22 @@ begin
     stim_proc: process
     begin
         -- Test 1: A = 8'h55, B = 8'hAA, Sel = "0000" (Add)
-        A <= "01010101"; -- 8'h55
-        B <= "10101010"; -- 8'hAA
+        A <= "00000001"; -- 8'h55
+        B <= "00011011"; -- 8'hAA
         Sel <= "0000";  -- Add operation
         wait for 10 ns;
-        if Result = "11111111" then
+        if Result = "00011100" then
             report "Test 1: Add passed";
         else
             report "Test 1: Add failed";
         end if;
 
         -- Test 2: A = 8'h55, B = 8'hAA, Sel = "0001" (Subtract)
-        A <= "01010101"; -- 8'h55
-        B <= "10101010"; -- 8'hAA
+        A <= "00000010"; -- 8'h55
+        B <= "00000001"; -- 8'hAA
         Sel <= "0001";  -- Subtract operation
         wait for 10 ns;
-        if Result = "11111111" then
+        if Result = "000000001" then
             report "Test 2: Subtract passed";
         else
             report "Test 2: Subtract failed";
@@ -103,7 +103,7 @@ begin
         B <= "01010101"; -- 8'h55
         Sel <= "0101";  -- NAND operation
         wait for 10 ns;
-        if Result = "11111111" then
+        if Result = "00000000" then
             report "Test 6: NAND passed";
         else
             report "Test 6: NAND failed";
@@ -121,22 +121,22 @@ begin
         end if;
 
         -- Test 8: A = 8'h00, B = 8'h00, Sel = "0111" (Comparison)
-        A <= "00000000"; -- 8'h00
-        B <= "00000000"; -- 8'h00
-        Sel <= "0111";  -- Comparison operation
+        A <= "00000100"; -- 8'h00
+        B <= "00000100"; -- 8'h00
+        Sel <= "1000";  -- Comparison operation
         wait for 10 ns;
-        if COMP_FLAG = "11110" then
+        if COMP_FLAG = "01110" then
             report "Test 8: Comparison passed";
         else
             report "Test 8: Comparison failed";
         end if;
 
         -- Test 9: A = 8'h01, B = 8'h01, Sel = "1000" (Comparison)
-        A <= "00000001"; -- 8'h01
+        A <= "00000010"; -- 8'h01
         B <= "00000001"; -- 8'h01
         Sel <= "1000";  -- Comparison operation
         wait for 10 ns;
-        if COMP_FLAG = "11110" then
+        if COMP_FLAG = "11000" then
             report "Test 9: Comparison passed";
         else
             report "Test 9: Comparison failed";
@@ -144,10 +144,10 @@ begin
 
         -- Test 10: A = 8'h01, B = 8'hFF, Sel = "1001" (Comparison)
         A <= "00000001"; -- 8'h01
-        B <= "11111111"; -- 8'hFF
-        Sel <= "1001";  -- Comparison operation
+        B <= "00000011"; -- 8'hFF
+        Sel <= "1000";  -- Comparison operation
         wait for 10 ns;
-        if COMP_FLAG = "10000" then
+        if COMP_FLAG = "00011" then
             report "Test 10: Comparison passed";
         else
             report "Test 10: Comparison failed";

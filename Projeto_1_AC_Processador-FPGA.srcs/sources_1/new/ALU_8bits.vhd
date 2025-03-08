@@ -19,7 +19,7 @@ architecture Behavioral of ALU_8bits is
 begin
     Carry(0) <= Sel(0); -- Se Sel(0) = 1, faz sub com carry = 1
 
-    
+    -- ALU bit operations
     ALU_Bit0: entity work.ALU port map (A(0), B(0), Carry(0), Sel, Temp_Result(0), Carry(1));
     ALU_Bit1: entity work.ALU port map (A(1), B(1), Carry(1), Sel, Temp_Result(1), Carry(2));
     ALU_Bit2: entity work.ALU port map (A(2), B(2), Carry(2), Sel, Temp_Result(2), Carry(3));
@@ -29,32 +29,28 @@ begin
     ALU_Bit6: entity work.ALU port map (A(6), B(6), Carry(6), Sel, Temp_Result(6), Carry(7));
     ALU_Bit7: entity work.ALU port map (A(7), B(7), Carry(7), Sel, Temp_Result(7), Carry(8));
 
-    process(Temp_Result, Carry)
+    process(A, B)
     begin
-        COMP_FLAG(0) <= Temp_Result(7); 
-        COMP_FLAG(4) <= NOT Temp_Result(7); 
-
-        if (Temp_Result = "00000000") then
-            COMP_FLAG(1) <= '1'; -- A <= B
-            COMP_FLAG(2) <= '1'; -- A = B
-            COMP_FLAG(3) <= '1'; -- A >= B
-            COMP_FLAG(4) <= '0'; -- A > B
-        else
-            COMP_FLAG(1) <= Temp_Result(7); -- A <= B ou A < B
-            COMP_FLAG(2) <= '0'; -- A = B 
-            COMP_FLAG(3) <= NOT (Temp_Result(7)); -- A >= B ou A > B
-        end if;
         
-    end process;
+        COMP_FLAG(0) <= '0';  
+        COMP_FLAG(1) <= '0';  
+        COMP_FLAG(2) <= '0';  
+        COMP_FLAG(3) <= '0';  
+        COMP_FLAG(4) <= '0';  
 
-    process (Sel, Temp_Result)
-    begin
-        if Sel(3) = '1' then
-            Result <= (others => '0'); 
-        else 
-            Result <= Temp_Result;
+        if (A = B) then
+            COMP_FLAG(1) <= '1';
+            COMP_FLAG(2) <= '1';  
+            COMP_FLAG(3) <= '1';  
+        elsif (A < B) then
+            COMP_FLAG(0) <= '1';  
+            COMP_FLAG(1) <= '1';  
+        else
+            COMP_FLAG(3) <= '1'; 
+            COMP_FLAG(4) <= '1';  
         end if;
     end process;
 
+    Result <= Temp_Result;  -- Output the result from the ALU
     
 end Behavioral;
