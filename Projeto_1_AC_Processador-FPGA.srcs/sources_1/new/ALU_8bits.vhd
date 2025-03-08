@@ -51,6 +51,6 @@ begin
         end if;
     end process;
 
-    Result <= Temp_Result;  -- Output the result from the ALU
+    Result <= Temp_Result;  
     
 end Behavioral;
