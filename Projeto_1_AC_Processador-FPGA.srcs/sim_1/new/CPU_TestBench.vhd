@@ -5,7 +5,7 @@ entity CPU_TestBench is
 end CPU_TestBench;
 
 architecture testbench of CPU_TestBench is
-	-- Component declaration
+	
 	component CPU
 		Port (
 			PIN : in std_logic_vector(7 downto 0);
@@ -14,7 +14,7 @@ architecture testbench of CPU_TestBench is
 		);
 	end component;
 
-	-- Signals for connecting to CPU
+	
 	signal PIN_tb  : std_logic_vector(7 downto 0) := (others => '0');
 	signal POUT_tb : std_logic_vector(7 downto 0);
 	signal clk_tb  : std_logic := '1';
