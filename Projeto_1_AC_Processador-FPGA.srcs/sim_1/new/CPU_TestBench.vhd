@@ -14,7 +14,6 @@ architecture testbench of CPU_TestBench is
 		);
 	end component;
 
-	
 	signal PIN_tb  : std_logic_vector(7 downto 0) := (others => '0');
 	signal POUT_tb : std_logic_vector(7 downto 0);
 	signal clk_tb  : std_logic := '1';
@@ -46,7 +45,8 @@ begin
 	-- Test process
 	process
 	begin
-		-- Reset the CPU
+
+        -- Reset the CPU
 		reset_tb <= '1';
 		wait for clk_period;
 		reset_tb <= '0';
