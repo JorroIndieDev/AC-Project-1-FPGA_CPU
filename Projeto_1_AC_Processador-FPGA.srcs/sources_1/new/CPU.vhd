@@ -195,7 +195,7 @@ architecture Structural of CPU is
 			WE       => ESCR_R,
 			SEL_REG1 => SEL_REG1,
 			SEL_REG2 => SEL_REG2,
-			data     => RESULTADO_ALU,
+			data     => Dados_r,
 			Operando1 => OPERANDO1,
 			Operando2 => OPERANDO2
 		);

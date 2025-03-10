@@ -15,9 +15,9 @@ architecture Behavioural of Register_8bit is
 
 begin
 
-    process (clk)
+    process (WE)
     begin
-        if rising_edge(clk)and WE = '1' then
+        if WE = '1' then
             reg <= data;
         end if;
     end process;

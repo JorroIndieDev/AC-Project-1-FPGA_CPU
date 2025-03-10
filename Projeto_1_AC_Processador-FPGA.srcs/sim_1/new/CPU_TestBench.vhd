@@ -16,8 +16,8 @@ architecture testbench of CPU_TestBench is
 
 	signal PIN_tb  : std_logic_vector(7 downto 0) := (others => '0');
 	signal POUT_tb : std_logic_vector(7 downto 0);
-	signal clk_tb  : std_logic := '1';
-	signal reset_tb : std_logic := '1';
+	signal clk_tb  : std_logic := '0';
+	signal reset_tb : std_logic := '0';
 
 	-- Clock period
 	constant clk_period : time := 10 ns;
@@ -36,22 +36,16 @@ begin
 	-- Clock process
 	process
 	begin
-		clk_tb <= '1';
-		wait for clk_period / 2;
 		clk_tb <= '0';
+		wait for clk_period / 2;
+		clk_tb <= '1';
 		wait for clk_period / 2;
 	end process;
 
 	-- Test process
 	process
 	begin
-
-        -- Reset the CPU
-		reset_tb <= '1';
-		wait for clk_period;
-		reset_tb <= '0';
-		wait for clk_period;
-
+	
 		-- Load a value into the CPU via PIN
 		PIN_tb <= "00001010";  -- Example: Load value 10
 		wait for clk_period * 2; 

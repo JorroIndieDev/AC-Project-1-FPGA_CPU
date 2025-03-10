@@ -16,7 +16,7 @@ architecture Behavioral of Memoria_instrucoes is
     type mem_array is array (0 to 255) of STD_LOGIC_VECTOR(18 downto 0);
     signal memoria : mem_array := (
         0 => "00000XXX001XXXXXXXX",
-        1 => "00100XXX00100000000",
+       1 => "00100XXX00100000000",
         2 => "00011XXX10100000000",
         3 => "00011XXX10000000001",
         4 => "01101101001XXXXXXXX",
@@ -35,6 +35,10 @@ architecture Behavioral of Memoria_instrucoes is
         17 => "10011XXXXXX00010001",
         18 => "00011XXX00100000000",
         19 => "00110010001XXXXXXXX",
+        20 => "10011XXXXXX00100000",
+        21 => "00011XXX00100000000",
+        22 => "00010XXX01111111111",
+        23 => "01011011001XXXXXXXX",
         others => "0000000000000000000"
     );
 begin
@@ -43,8 +47,8 @@ begin
     begin
         if (Endereco'length /= 8) or (Endereco = "UUUUUUUU") then
             opcode    <= "00000";
-            SEL_REG1  <= "000";
             SEL_REG2  <= "000";
+            SEL_REG1  <= "000";
             Constante <= "00000000";
         else
             addr_int := to_integer(unsigned(Endereco));
@@ -56,8 +60,8 @@ begin
                 Constante <= "00000000";
             else
                 opcode    <= memoria(addr_int)(18 downto 14);
-                SEL_REG1  <= memoria(addr_int)(13 downto 11);
-                SEL_REG2  <= memoria(addr_int)(10 downto 8);
+                SEL_REG2  <= memoria(addr_int)(13 downto 11);
+                SEL_REG1  <= memoria(addr_int)(10 downto 8);
                 Constante <= memoria(addr_int)(7 downto 0);
             end if;
         end if;

@@ -66,7 +66,7 @@ begin
         assert Constante_tb = "00000000" report "ERROR: Constante mismatch for uninitialized address" severity error;
 
         -- Test normal valid address (e.g., address 10)
-        Endereco_tb <= "00001010"; -- Address 10
+        Endereco_tb <= "00010000"; -- Address 10
         wait for 10 ns;
         assert opcode_tb = "00000" report "ERROR: opcode mismatch for valid address" severity error;
         assert SEL_REG1_tb = "000" report "ERROR: SEL_REG1 mismatch for valid address" severity error;
