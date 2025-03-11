@@ -6,7 +6,7 @@ entity MotherBoard is
     clk, WR : in std_logic;
     opcode_out : out std_logic_vector(4 downto 0);
     SEL_REG1, SEL_REG2 : out std_logic_vector(2 downto 0); --
-    Dados_M : out std_logic_vector(7 downto 0);
+    Dados_M, constante: out std_logic_vector(7 downto 0);
     Operando1, Endereco : in std_logic_vector(7 downto 0)
     );
 end MotherBoard;
@@ -33,7 +33,7 @@ architecture structural of MotherBoard is
         );
     end component;
     signal opcode : std_logic_vector(4 downto 0);
-    signal constante : std_logic_vector(7 downto 0);
+    signal constante_s : std_logic_vector(7 downto 0);
 begin
     
     Mem_Inst : Memoria_instrucoes
@@ -42,16 +42,16 @@ begin
         opcode => opcode,
         SEL_REG1 => SEL_REG1,
         SEL_REG2 => SEL_REG2,
-        Constante => constante
+        Constante => constante_s
     );
     Mem_Dados : Memoria_dados
     port map (
         CLK => clk,
         WR => WR,
-        constante => constante,
+        constante => constante_s,
         Operando1 => operando1,
         Dados_M => Dados_M
     );
-    
+    constante <= constante_s;
     opcode_out <= opcode;
 end structural;

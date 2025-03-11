@@ -3,150 +3,106 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="CPU_TestBench_behav.wdb" id="1">
+      <db_ref path="MB_TestBench_behav.wdb" id="1">
          <top_modules>
-            <top_module name="CPU_TestBench" />
+            <top_module name="MB_TestBench" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="172.330 ns"></ZoomStartTime>
-      <ZoomEndTime time="302.331 ns"></ZoomEndTime>
-      <Cursor1Time time="83.600 ns"></Cursor1Time>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="329.401 ns"></ZoomEndTime>
+      <Cursor1Time time="0.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="164"></NameColumnWidth>
+      <NameColumnWidth column_width="149"></NameColumnWidth>
       <ValueColumnWidth column_width="72"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="30" />
-   <wvobject fp_name="/CPU_TestBench/PIN_tb" type="array">
-      <obj_property name="ElementShortName">PIN_tb[7:0]</obj_property>
-      <obj_property name="ObjectShortName">PIN_tb[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/CPU_TestBench/clk_tb" type="logic">
-      <obj_property name="ElementShortName">clk_tb</obj_property>
-      <obj_property name="ObjectShortName">clk_tb</obj_property>
-   </wvobject>
-   <wvobject fp_name="/CPU_TestBench/reset_tb" type="logic">
-      <obj_property name="ElementShortName">reset_tb</obj_property>
-      <obj_property name="ObjectShortName">reset_tb</obj_property>
-   </wvobject>
-   <wvobject fp_name="/CPU_TestBench/clk_period" type="other">
-      <obj_property name="ElementShortName">clk_period</obj_property>
-      <obj_property name="ObjectShortName">clk_period</obj_property>
-   </wvobject>
-   <wvobject fp_name="/CPU_TestBench/UUT/Decoder/Opcode" type="array">
-      <obj_property name="ElementShortName">Opcode[4:0]</obj_property>
-      <obj_property name="ObjectShortName">Opcode[4:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/CPU_TestBench/UUT/InstMemory/opcode" type="array">
-      <obj_property name="ElementShortName">opcode[4:0]</obj_property>
-      <obj_property name="ObjectShortName">opcode[4:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/CPU_TestBench/UUT/Decoder/ESCR_R" type="logic">
-      <obj_property name="ElementShortName">ESCR_R</obj_property>
-      <obj_property name="ObjectShortName">ESCR_R</obj_property>
-   </wvobject>
-   <wvobject fp_name="/CPU_TestBench/UUT/Decoder/ESCR_P" type="logic">
-      <obj_property name="ElementShortName">ESCR_P</obj_property>
-      <obj_property name="ObjectShortName">ESCR_P</obj_property>
-      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+   <WVObjectSize size="18" />
+   <wvobject fp_name="/MB_TestBench/UUT_CPU/PIN" type="array">
+      <obj_property name="ElementShortName">PIN[7:0]</obj_property>
+      <obj_property name="ObjectShortName">PIN[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject fp_name="/CPU_TestBench/UUT/Decoder/ESCR_F" type="logic">
-      <obj_property name="ElementShortName">ESCR_F</obj_property>
-      <obj_property name="ObjectShortName">ESCR_F</obj_property>
+   <wvobject fp_name="/MB_TestBench/UUT_CPU/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
    </wvobject>
-   <wvobject fp_name="/CPU_TestBench/UUT/Decoder/WR" type="logic">
-      <obj_property name="ElementShortName">WR</obj_property>
-      <obj_property name="ObjectShortName">WR</obj_property>
+   <wvobject fp_name="/MB_TestBench/UUT_CPU/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject fp_name="/CPU_TestBench/UUT/InstMemory/Endereco" type="array">
+   <wvobject fp_name="/MB_TestBench/UUT_CPU/POUT" type="array">
+      <obj_property name="ElementShortName">POUT[7:0]</obj_property>
+      <obj_property name="ObjectShortName">POUT[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/UUT_CPU/Constante" type="array">
+      <obj_property name="ElementShortName">Constante[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Constante[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/UUT_CPU/SEL_REG1" type="array">
+      <obj_property name="ElementShortName">SEL_REG1[2:0]</obj_property>
+      <obj_property name="ObjectShortName">SEL_REG1[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/UUT_CPU/SEL_REG2" type="array">
+      <obj_property name="ElementShortName">SEL_REG2[2:0]</obj_property>
+      <obj_property name="ObjectShortName">SEL_REG2[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/UUT_CPU/Opcode" type="array">
+      <obj_property name="ElementShortName">Opcode[4:0]</obj_property>
+      <obj_property name="ObjectShortName">Opcode[4:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/UUT_CPU/Endereco" type="array">
       <obj_property name="ElementShortName">Endereco[7:0]</obj_property>
       <obj_property name="ObjectShortName">Endereco[7:0]</obj_property>
       <obj_property name="CustomSignalColor">#FFD700</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/CPU_TestBench/UUT/RegFile/clk" type="logic">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/CPU_TestBench/UUT/RegFile/WE" type="logic">
-      <obj_property name="ElementShortName">WE</obj_property>
-      <obj_property name="ObjectShortName">WE</obj_property>
-   </wvobject>
-   <wvobject fp_name="/CPU_TestBench/UUT/RegFile/data" type="array">
-      <obj_property name="ElementShortName">data[7:0]</obj_property>
-      <obj_property name="ObjectShortName">data[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/CPU_TestBench/UUT/RegFile/Operando1" type="array">
-      <obj_property name="ElementShortName">Operando1[7:0]</obj_property>
-      <obj_property name="ObjectShortName">Operando1[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/CPU_TestBench/UUT/RegFile/Operando2" type="array">
-      <obj_property name="ElementShortName">Operando2[7:0]</obj_property>
-      <obj_property name="ObjectShortName">Operando2[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/CPU_TestBench/POUT_tb" type="array">
-      <obj_property name="ElementShortName">POUT_tb[7:0]</obj_property>
-      <obj_property name="ObjectShortName">POUT_tb[7:0]</obj_property>
-      <obj_property name="CustomSignalColor">#0000FF</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/CPU_TestBench/UUT/RegFile/reg" type="array">
-      <obj_property name="ElementShortName">reg[0:5][7:0]</obj_property>
-      <obj_property name="ObjectShortName">reg[0:5][7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/CPU_TestBench/UUT/PC/CONSTANTE" type="array">
-      <obj_property name="ElementShortName">CONSTANTE[7:0]</obj_property>
-      <obj_property name="ObjectShortName">CONSTANTE[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/CPU_TestBench/UUT/PC/ENDERECO" type="array">
-      <obj_property name="ElementShortName">ENDERECO[7:0]</obj_property>
-      <obj_property name="ObjectShortName">ENDERECO[7:0]</obj_property>
-      <obj_property name="CustomSignalColor">#FFA500</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/CPU_TestBench/UUT/PeripheralManager/P_in" type="array">
-      <obj_property name="ElementShortName">P_in[7:0]</obj_property>
-      <obj_property name="ObjectShortName">P_in[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/CPU_TestBench/UUT/PeripheralManager/ESCR_P" type="logic">
-      <obj_property name="ElementShortName">ESCR_P</obj_property>
-      <obj_property name="ObjectShortName">ESCR_P</obj_property>
-   </wvobject>
-   <wvobject fp_name="/CPU_TestBench/UUT/PeripheralManager/clk" type="logic">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/CPU_TestBench/UUT/PeripheralManager/P_out" type="array">
-      <obj_property name="ElementShortName">P_out[7:0]</obj_property>
-      <obj_property name="ObjectShortName">P_out[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/CPU_TestBench/UUT/PeripheralManager/Dados_IN" type="array">
-      <obj_property name="ElementShortName">Dados_IN[7:0]</obj_property>
-      <obj_property name="ObjectShortName">Dados_IN[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/CPU_TestBench/UUT/PeripheralManager/valueIn" type="array">
-      <obj_property name="ElementShortName">valueIn[7:0]</obj_property>
-      <obj_property name="ObjectShortName">valueIn[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/CPU_TestBench/UUT/DataMemory/WR" type="logic">
+   <wvobject fp_name="/MB_TestBench/UUT_CPU/WR" type="logic">
       <obj_property name="ElementShortName">WR</obj_property>
       <obj_property name="ObjectShortName">WR</obj_property>
    </wvobject>
-   <wvobject fp_name="/CPU_TestBench/UUT/DataMemory/constante" type="array">
-      <obj_property name="ElementShortName">constante[7:0]</obj_property>
-      <obj_property name="ObjectShortName">constante[7:0]</obj_property>
+   <wvobject fp_name="/MB_TestBench/UUT_CPU/OPERANDO1" type="array">
+      <obj_property name="ElementShortName">OPERANDO1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">OPERANDO1[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/CPU_TestBench/UUT/DataMemory/Operando1" type="array">
-      <obj_property name="ElementShortName">Operando1[7:0]</obj_property>
-      <obj_property name="ObjectShortName">Operando1[7:0]</obj_property>
+   <wvobject fp_name="/MB_TestBench/UUT_CPU/OPERANDO2" type="array">
+      <obj_property name="ElementShortName">OPERANDO2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">OPERANDO2[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/CPU_TestBench/UUT/DataMemory/memoria" type="array">
+   <wvobject fp_name="/MB_TestBench/UUT_CPU/RESULTADO_ALU" type="array">
+      <obj_property name="ElementShortName">RESULTADO_ALU[7:0]</obj_property>
+      <obj_property name="ObjectShortName">RESULTADO_ALU[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/UUT_CPU/RegFile/reg" type="array">
+      <obj_property name="ElementShortName">reg[0:5][7:0]</obj_property>
+      <obj_property name="ObjectShortName">reg[0:5][7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/UUT/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/UUT/WR" type="logic">
+      <obj_property name="ElementShortName">WR</obj_property>
+      <obj_property name="ObjectShortName">WR</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/UUT/Dados_M" type="array">
+      <obj_property name="ElementShortName">Dados_M[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Dados_M[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/UUT/Mem_Dados/memoria" type="array">
       <obj_property name="ElementShortName">memoria[0:255][7:0]</obj_property>
       <obj_property name="ObjectShortName">memoria[0:255][7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
 </wave_config>

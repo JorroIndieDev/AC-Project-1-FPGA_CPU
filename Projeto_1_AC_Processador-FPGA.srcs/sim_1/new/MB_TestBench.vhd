@@ -11,7 +11,7 @@ architecture testbench of MB_TestBench is
 		clk, WR : in std_logic;
 		opcode_out : out std_logic_vector(4 downto 0);
 		SEL_REG1, SEL_REG2 : out std_logic_vector(2 downto 0); --
-		Dados_M : out std_logic_vector(7 downto 0);
+		Dados_M, constante: out std_logic_vector(7 downto 0);
 		Operando1, Endereco: in std_logic_vector(7 downto 0)
 	);
 	end component;
@@ -53,6 +53,7 @@ begin
 			SEL_REG1 => SEL_REG1,
 			SEL_REG2 => SEL_REG2,
 			Dados_M => Dados_M,
+			constante => Constante,
 			Operando1 => Operando1,
 			Endereco => Endereco
 		);
