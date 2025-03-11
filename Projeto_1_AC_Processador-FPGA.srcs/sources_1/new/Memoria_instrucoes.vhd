@@ -45,12 +45,6 @@ begin
     process(Endereco)
         variable addr_int : integer;
     begin
-        if (Endereco'length /= 8) or (Endereco = "UUUUUUUU") then
-            opcode    <= "00000";
-            SEL_REG2  <= "000";
-            SEL_REG1  <= "000";
-            Constante <= "00000000";
-        else
             addr_int := to_integer(unsigned(Endereco));
 
             if addr_int < 0 or addr_int > 255 then
@@ -64,6 +58,5 @@ begin
                 SEL_REG1  <= memoria(addr_int)(10 downto 8);
                 Constante <= memoria(addr_int)(7 downto 0);
             end if;
-        end if;
     end process;
 end Behavioral;

@@ -13,7 +13,7 @@ C:/Users/Sofia Pereira/Documents/GitHub/AC-Project-1-FPGA_CPU/Projeto_1_AC_Proce
 C:/Users/Sofia Pereira/Documents/GitHub/AC-Project-1-FPGA_CPU/Projeto_1_AC_Processador-FPGA.srcs/sources_1/new/MUX_PC.vhd,1741362123,vhdl,,,,mux_pc,,,,,,,,
 C:/Users/Sofia Pereira/Documents/GitHub/AC-Project-1-FPGA_CPU/Projeto_1_AC_Processador-FPGA.srcs/sources_1/new/MUX_R.vhd,1741530706,vhdl,,,,mux_r,,,,,,,,
 C:/Users/Sofia Pereira/Documents/GitHub/AC-Project-1-FPGA_CPU/Projeto_1_AC_Processador-FPGA.srcs/sources_1/new/Memoria_dados.vhd,1741362123,vhdl,,,,memoria_dados,,,,,,,,
-C:/Users/Sofia Pereira/Documents/GitHub/AC-Project-1-FPGA_CPU/Projeto_1_AC_Processador-FPGA.srcs/sources_1/new/Memoria_instrucoes.vhd,1741625039,vhdl,,,,memoria_instrucoes,,,,,,,,
+C:/Users/Sofia Pereira/Documents/GitHub/AC-Project-1-FPGA_CPU/Projeto_1_AC_Processador-FPGA.srcs/sources_1/new/Memoria_instrucoes.vhd,1741685068,vhdl,,,,memoria_instrucoes,,,,,,,,
 C:/Users/Sofia Pereira/Documents/GitHub/AC-Project-1-FPGA_CPU/Projeto_1_AC_Processador-FPGA.srcs/sources_1/new/Peripheral_Manager.vhd,1741362123,vhdl,,,,peripheral_manager,,,,,,,,
 C:/Users/Sofia Pereira/Documents/GitHub/AC-Project-1-FPGA_CPU/Projeto_1_AC_Processador-FPGA.srcs/sources_1/new/ROM_decoder.vhd,1741362123,vhdl,,,,rom_decoder,,,,,,,,
 C:/Users/Sofia Pereira/Documents/GitHub/AC-Project-1-FPGA_CPU/Projeto_1_AC_Processador-FPGA.srcs/sources_1/new/Register_8bit.vhd,1741624871,vhdl,,,,register_8bit,,,,,,,,
