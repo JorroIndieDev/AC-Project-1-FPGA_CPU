@@ -1,19 +1,36 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-entity CPU_TestBench is
-end CPU_TestBench;
+entity MB_TestBench is
+end MB_TestBench;
 
-architecture testbench of CPU_TestBench is
+architecture testbench of MB_TestBench is
 	
-	component CPU
-		Port (
-			PIN : in std_logic_vector(7 downto 0);
-			reset, clk : in std_logic;
-			POUT : out std_logic_vector(7 downto 0)
-		);
+	component MotherBoard
+	Port (
+		clk, WR : in std_logic;
+		opcode : out std_logic_vector(4 downto 0);
+		SEL_REG1, SEL_REG2 : out std_logic_vector(2 downto 0); --
+		Dados_M : out std_logic_vector(7 downto 0);
+		Operando1 : in std_logic_vector(7 downto 0)
+	);
 	end component;
 
+	component CPU
+	Port (
+        -- CPU
+        PIN : in std_logic_vector(7 downto 0); --
+        reset, clk : in std_logic; --
+        POUT : out std_logic_vector(7 downto 0); --
+        -- inputs from MB
+        Dados_M, Constante : in std_logic_vector(7 downto 0); --
+        SEL_REG1, SEL_REG2 : in std_logic_vector(2 downto 0); --
+        Opcode : in std_logic_vector(4 downto 0); --
+        -- outputs from MB
+        Operando1_out, Endereco : out std_logic_vector(7 downto 0); --
+        WR : out std_logic --
+    );
+	end component;
 	signal PIN_tb  : std_logic_vector(7 downto 0) := (others => '0');
 	signal POUT_tb : std_logic_vector(7 downto 0);
 	signal clk_tb  : std_logic := '0';
@@ -25,7 +42,7 @@ architecture testbench of CPU_TestBench is
 begin
 
 	-- Instantiate the CPU
-	UUT: CPU
+	UUT: MotherBoard
 		port map (
 			PIN   => PIN_tb,
 			reset => reset_tb,

@@ -3,14 +3,21 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity CPU is
 Port (
+	-- CPU
 	PIN : in std_logic_vector(7 downto 0);
 	reset, clk : in std_logic;
-	POUT : out std_logic_vector(7 downto 0)
+	POUT : out std_logic_vector(7 downto 0);
+	-- inputs from MB
+	Dados_M, Constante : in std_logic_vector(7 downto 0);
+	SEL_REG1, SEL_REG2 : in std_logic_vector(2 downto 0);
+	Opcode : in std_logic_vector(4 downto 0);
+	-- outputs from MB
+	Operando1_out, Endereco : out std_logic_vector(7 downto 0);
+	WR : out std_logic
  );
 end CPU;
 
 architecture Structural of CPU is
-
 
 	------------------------------------------------------- PC
 	component Program_Counter
@@ -83,28 +90,6 @@ architecture Structural of CPU is
 		);
 	end component;
 
-	------------------------------------------------------- Memoria_dados
-	component Memoria_dados
-		Port (
-			CLK : in STD_LOGIC;
-			WR : in STD_LOGIC;
-			constante : in STD_LOGIC_VECTOR(7 downto 0);
-			Operando1 : in STD_LOGIC_VECTOR(7 downto 0);
-			Dados_M  : out STD_LOGIC_VECTOR(7 downto 0)
-		);
-	end component;
-
-	------------------------------------------------------- Memoria_instrucoes
-	component Memoria_instrucoes
-		Port (
-			Endereco : in STD_LOGIC_VECTOR(7 downto 0);
-			opcode: out STD_LOGIC_VECTOR(4 downto 0);
-			SEL_REG1 : out STD_LOGIC_VECTOR(2 downto 0);
-			SEL_REG2 : out STD_LOGIC_VECTOR(2 downto 0);
-			Constante: out STD_LOGIC_VECTOR(7 downto 0)
-		);
-	end component;
-
 	------------------------------------------------------- ROM_decoder
 	component ROM_decoder
 		Port (
@@ -118,18 +103,14 @@ architecture Structural of CPU is
 
 
 	-- Signals
-	signal ENDERECO, CONSTANTE, OPERANDO1, OPERANDO2, RESULTADO_ALU, Dados_R, Dados_M, Dados_IN : std_logic_vector(7 downto 0) := (others => '0');
+	signal OPERANDO1, OPERANDO2, RESULTADO_ALU, Dados_R, Dados_IN : std_logic_vector(7 downto 0) := (others => '0');
 	signal COMP_FLAG : std_logic_vector(4 downto 0) := (others => '0');
-	signal S_FLAG, ESCR_PC, ESCR_F, ESCR_R, ESCR_P, WR : std_logic := '0';
+	signal S_FLAG, ESCR_PC, ESCR_F, ESCR_R, ESCR_P : std_logic := '0';
 	signal SEL_PC, SEL_F : std_logic_vector(2 downto 0) := (others => '0');
 	signal SEL_ALU : std_logic_vector(3 downto 0) := (others => '0');
 	signal SEL_R : std_logic_vector(1 downto 0) := (others => '0');
-	signal SEL_REG1, SEL_REG2 : std_logic_vector(2 downto 0) := (others => '0');
-	signal Opcode : std_logic_vector(4 downto 0) := (others => '0');
-
 	
 	begin
-	
 
 		---------- 2.6 Program Counter
 		PC : Program_Counter
@@ -140,16 +121,6 @@ architecture Structural of CPU is
 			CONSTANTE => CONSTANTE,
 			ENDERECO  => ENDERECO
 		);
-
-		---------- 2.8 Instruction Memory
-		InstMemory : Memoria_instrucoes
-			port map (
-				Endereco   => ENDERECO,
-				opcode     => Opcode,
-				SEL_REG1   => SEL_REG1,
-				SEL_REG2   => SEL_REG2,
-				Constante  => CONSTANTE
-			);
 
 		---------- 2.10 ROM Decoder
 		Decoder : ROM_decoder
@@ -222,16 +193,6 @@ architecture Structural of CPU is
 			Dados_IN  => Dados_IN
 		);
 
-		---------- 2.9 Memory Data
-		DataMemory : Memoria_dados
-		port map (
-			CLK        => clk,
-			WR         => WR,
-			constante  => CONSTANTE,
-			Operando1  => OPERANDO1,
-			Dados_M    => Dados_M
-		);
-
 		---------- 2.5 Flag Register
 		Flags : Flag_Register
 		port map (
@@ -242,7 +203,7 @@ architecture Structural of CPU is
 			S_FLAG    => S_FLAG
 		);
 
-
+        operando1_out <= OPERANDO1;
 
 
 end Structural;
