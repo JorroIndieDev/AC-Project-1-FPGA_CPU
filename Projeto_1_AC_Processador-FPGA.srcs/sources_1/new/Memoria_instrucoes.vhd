@@ -18,7 +18,7 @@ architecture Behavioral of Memoria_instrucoes is
         0 => "00000XXX001XXXXXXXX",
        1 => "00100XXX00100000000",
         2 => "00011XXX10100000000",
-        3 => "00011XXX10000000001",
+        3 => "00010XXX10000000001",
         4 => "01101101001XXXXXXXX",
         5 => "01111XXXXXX00010101",
         6 => "00010XXX01000101010",

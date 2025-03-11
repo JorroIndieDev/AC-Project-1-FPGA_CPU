@@ -12,13 +12,13 @@ end Peripheral_Manager;
 
 architecture Behavioral of Peripheral_Manager is
 
-    signal valueIn : std_logic_vector(7 downto 0);
+    signal valueIn : std_logic_vector(7 downto 0) := (others => '0');
 
 begin
 
     process(clk)
     begin
-        valueIN <= (others => '0');
+        
         if rising_edge(clk) then
             if ESCR_P = '1' then
                 valueIN <= operando1;
