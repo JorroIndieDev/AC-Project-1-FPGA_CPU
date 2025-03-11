@@ -36,9 +36,9 @@ begin
 	-- Clock process
 	process
 	begin
-		clk_tb <= '0';
-		wait for clk_period / 2;
 		clk_tb <= '1';
+		wait for clk_period / 2;
+		clk_tb <= '0';
 		wait for clk_period / 2;
 	end process;
 

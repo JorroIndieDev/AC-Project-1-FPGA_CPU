@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="CPU_TestBench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="CPU_TestBench" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="128.501 ns"></ZoomEndTime>
+      <Cursor1Time time="84.900 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="174"></NameColumnWidth>
+      <ValueColumnWidth column_width="77"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="31" />
+   <wvobject fp_name="/CPU_TestBench/clk_tb" type="logic">
+      <obj_property name="ElementShortName">clk_tb</obj_property>
+      <obj_property name="ObjectShortName">clk_tb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TestBench/reset_tb" type="logic">
+      <obj_property name="ElementShortName">reset_tb</obj_property>
+      <obj_property name="ObjectShortName">reset_tb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TestBench/clk_period" type="other">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TestBench/UUT/RegFile/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TestBench/UUT/RegFile/SEL_REG2" type="array">
+      <obj_property name="ElementShortName">SEL_REG2[2:0]</obj_property>
+      <obj_property name="ObjectShortName">SEL_REG2[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TestBench/UUT/RegFile/data" type="array">
+      <obj_property name="ElementShortName">data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TestBench/UUT/RegFile/Operando1" type="array">
+      <obj_property name="ElementShortName">Operando1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Operando1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TestBench/UUT/RegFile/Operando2" type="array">
+      <obj_property name="ElementShortName">Operando2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Operando2[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TestBench/UUT/RegFile/reg" type="array">
+      <obj_property name="ElementShortName">reg[0:5][7:0]</obj_property>
+      <obj_property name="ObjectShortName">reg[0:5][7:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TestBench/UUT/RegFile/WE" type="logic">
+      <obj_property name="ElementShortName">WE</obj_property>
+      <obj_property name="ObjectShortName">WE</obj_property>
+      <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TestBench/PIN_tb" type="array">
+      <obj_property name="ElementShortName">PIN_tb[7:0]</obj_property>
+      <obj_property name="ObjectShortName">PIN_tb[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TestBench/POUT_tb" type="array">
+      <obj_property name="ElementShortName">POUT_tb[7:0]</obj_property>
+      <obj_property name="ObjectShortName">POUT_tb[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#0000FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TestBench/UUT/RegFile/SEL_REG1" type="array">
+      <obj_property name="ElementShortName">SEL_REG1[2:0]</obj_property>
+      <obj_property name="ObjectShortName">SEL_REG1[2:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TestBench/UUT/PC/CLK" type="logic">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TestBench/UUT/PC/RESET" type="logic">
+      <obj_property name="ElementShortName">RESET</obj_property>
+      <obj_property name="ObjectShortName">RESET</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TestBench/UUT/PC/ESCR_PC" type="logic">
+      <obj_property name="ElementShortName">ESCR_PC</obj_property>
+      <obj_property name="ObjectShortName">ESCR_PC</obj_property>
+      <obj_property name="CustomSignalColor">#0000FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TestBench/UUT/PC/CONSTANTE" type="array">
+      <obj_property name="ElementShortName">CONSTANTE[7:0]</obj_property>
+      <obj_property name="ObjectShortName">CONSTANTE[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TestBench/UUT/PC/ENDERECO" type="array">
+      <obj_property name="ElementShortName">ENDERECO[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ENDERECO[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TestBench/UUT/PC/PC" type="array">
+      <obj_property name="ElementShortName">PC[7:0]</obj_property>
+      <obj_property name="ObjectShortName">PC[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TestBench/UUT/MuxALU/SEL_R" type="array">
+      <obj_property name="ElementShortName">SEL_R[1:0]</obj_property>
+      <obj_property name="ObjectShortName">SEL_R[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TestBench/UUT/MuxALU/Dados_M" type="array">
+      <obj_property name="ElementShortName">Dados_M[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Dados_M[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TestBench/UUT/MuxALU/Dados_IN" type="array">
+      <obj_property name="ElementShortName">Dados_IN[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Dados_IN[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TestBench/UUT/MuxALU/Resultado" type="array">
+      <obj_property name="ElementShortName">Resultado[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Resultado[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TestBench/UUT/MuxALU/Constante" type="array">
+      <obj_property name="ElementShortName">Constante[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Constante[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TestBench/UUT/MuxALU/Dados_R" type="array">
+      <obj_property name="ElementShortName">Dados_R[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Dados_R[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TestBench/UUT/MuxALU/SEL_R" type="array">
+      <obj_property name="ElementShortName">SEL_R[1:0]</obj_property>
+      <obj_property name="ObjectShortName">SEL_R[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TestBench/UUT/MuxALU/Dados_M" type="array">
+      <obj_property name="ElementShortName">Dados_M[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Dados_M[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TestBench/UUT/MuxALU/Dados_IN" type="array">
+      <obj_property name="ElementShortName">Dados_IN[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Dados_IN[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TestBench/UUT/MuxALU/Resultado" type="array">
+      <obj_property name="ElementShortName">Resultado[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Resultado[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TestBench/UUT/MuxALU/Constante" type="array">
+      <obj_property name="ElementShortName">Constante[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Constante[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_TestBench/UUT/MuxALU/Dados_R" type="array">
+      <obj_property name="ElementShortName">Dados_R[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Dados_R[7:0]</obj_property>
+   </wvobject>
+</wave_config>

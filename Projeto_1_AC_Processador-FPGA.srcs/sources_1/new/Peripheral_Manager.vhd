@@ -21,12 +21,13 @@ begin
         
         if rising_edge(clk) then
             if ESCR_P = '1' then
-                valueIN <= operando1;
+                P_out <= operando1;
+            else
+                P_out <= (others => '0');
             end if;
         end if;
     end process;
 
     Dados_IN <= P_in when ESCR_P = '0' else (others => '0');
-    P_out <= valueIN;
 
 end Behavioral;
