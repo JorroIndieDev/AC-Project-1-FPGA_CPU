@@ -3,7 +3,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity CPU_MB is
     Port (
-        CLK, RESET : in STD_LOGIC;
+        clk : in STD_LOGIC;
+        reset : in STD_LOGIC;
         PIN : in STD_LOGIC_VECTOR(7 downto 0);
         POUT : out STD_LOGIC_VECTOR(7 downto 0)
     );

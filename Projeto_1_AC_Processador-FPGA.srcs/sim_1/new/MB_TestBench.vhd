@@ -8,9 +8,10 @@ architecture testbench of MB_TestBench is
 
 	component CPU_MB
 		Port (
-			CLK, RESET: in std_logic;
-			PIN : in std_logic_vector(7 downto 0);
-			POUT : out std_logic_vector(7 downto 0)
+			clk : in STD_LOGIC;
+			reset : in STD_LOGIC;
+			PIN : in STD_LOGIC_VECTOR(7 downto 0);
+			POUT : out STD_LOGIC_VECTOR(7 downto 0)
 		);
 	end component;
 
@@ -24,8 +25,8 @@ begin
 	-- Instantiate the CPU
 	UUT: CPU_MB
 		port map (
-			CLK => clk_tb,
-			RESET => reset_tb,
+			clk => clk_tb,
+			reset => reset_tb,
 			PIN => PIN_tb,
 			POUT => POUT_tb
 		);
