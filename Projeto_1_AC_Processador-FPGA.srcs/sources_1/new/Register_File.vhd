@@ -32,7 +32,7 @@ begin
         end if ;
     end process;
 
-    process(SEL_REG1, SEL_REG2)
+    process(SEL_REG1, SEL_REG2, reg)
     begin
         case SEL_REG1 is
             when "000" => Operando1 <= reg(0);

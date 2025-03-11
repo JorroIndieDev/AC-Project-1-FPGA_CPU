@@ -17,13 +17,14 @@ architecture Behavioral of Memoria_dados is
     type mem_array is array (0 to 255) of STD_LOGIC_VECTOR(7 downto 0);
     signal memoria : mem_array := (others => (others => '0'));
 begin
-    process(CLK)
+    process(CLK, operando1, constante)
     begin
         if rising_edge(CLK) then
             if WR = '1' then
                 memoria(conv_integer(constante)) <= Operando1;
             end if;
-            Dados_M <= memoria(conv_integer(constante));
         end if;
     end process;
+    Dados_M <= memoria(conv_integer(constante));
+
 end Behavioral;

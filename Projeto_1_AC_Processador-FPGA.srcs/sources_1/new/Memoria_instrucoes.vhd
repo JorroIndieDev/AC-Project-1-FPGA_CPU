@@ -30,7 +30,7 @@ architecture Behavioral of Memoria_instrucoes is
         11 => "00011" & "XXX" & "001" & "00000000", -- LD R1, [0]
         12 => "00101" & "011" & "001" & "XXXXXXXX", -- ADD R1, R3
         13 => "00101" & "011" & "001" & "XXXXXXXX", -- ADD R1, R3
-        14 => "10100" & "XXX" & "001" & "00100000", -- JZ R1, 16
+        14 => "10100" & "XXX" & "001" & "00010000", -- JZ R1, 16
         15 => "00101" & "100" & "001" & "XXXXXXXX", -- ADD R1, R4
         16 => "00001" & "XXX" & "001" & "XXXXXXXX", -- STP R1
         17 => "10011" & "XXX" & "XXX" & "00010001", -- JMP 17
