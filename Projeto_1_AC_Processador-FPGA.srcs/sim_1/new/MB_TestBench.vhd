@@ -5,73 +5,31 @@ entity MB_TestBench is
 end MB_TestBench;
 
 architecture testbench of MB_TestBench is
-	
-	component MotherBoard
-	Port (
-		clk, WR : in std_logic;
-		opcode_out : out std_logic_vector(4 downto 0);
-		SEL_REG1, SEL_REG2 : out std_logic_vector(2 downto 0); --
-		Dados_M, constante: out std_logic_vector(7 downto 0);
-		Operando1, Endereco: in std_logic_vector(7 downto 0)
-	);
+
+	component CPU_MB
+		Port (
+			CLK, RESET: in std_logic;
+			PIN : in std_logic_vector(7 downto 0);
+			POUT : out std_logic_vector(7 downto 0)
+		);
 	end component;
 
-	component CPU
-	Port (
-        -- CPU
-        PIN : in std_logic_vector(7 downto 0); --
-        reset, clk : in std_logic; --
-        POUT : out std_logic_vector(7 downto 0); --
-        -- inputs from MB
-        Dados_M, Constante : in std_logic_vector(7 downto 0); --
-        SEL_REG1, SEL_REG2 : in std_logic_vector(2 downto 0); --
-        Opcode : in std_logic_vector(4 downto 0); --
-        -- outputs from MB
-        Operando1_out, Endereco : out std_logic_vector(7 downto 0); --
-        WR : out std_logic --
-    );
-	end component;
-
-	signal PIN_tb, POUT_tb : std_logic_vector(7 downto 0) := (others => '0');
-	signal Dados_M, Constante, Operando1, Endereco : std_logic_vector(7 downto 0);
-	signal clk_tb, reset_tb  : std_logic := '0';
-	signal WR: std_logic;
-	signal SEL_REG1, SEL_REG2 : std_logic_vector(2 downto 0);
-	signal opcode : std_logic_vector(4 downto 0);
-
+	signal PIN_tb, POUT_tb : std_logic_vector(7 downto 0);
+	signal reset_tb, clk_tb : std_logic;
 	-- Clock period
 	constant clk_period : time := 10 ns;
 
 begin
 
 	-- Instantiate the CPU
-	UUT: MotherBoard
+	UUT: CPU_MB
 		port map (
-			clk => clk_tb,
-			WR => WR,
-			opcode_out => opcode,
-			SEL_REG1 => SEL_REG1,
-			SEL_REG2 => SEL_REG2,
-			Dados_M => Dados_M,
-			constante => Constante,
-			Operando1 => Operando1,
-			Endereco => Endereco
-		);
-	UUT_CPU : CPU
-		port map (
+			CLK => clk_tb,
+			RESET => reset_tb,
 			PIN => PIN_tb,
-			reset => reset_tb,
-			clk => clk_tb,
-			POUT => Pout_tb,
-			Dados_M => Dados_M,
-			Constante => Constante,
-			SEL_REG1 => SEL_REG1,
-			SEL_REG2 => SEL_REG2,
-			Opcode => opcode,
-			Operando1_out => Operando1,
-			Endereco => Endereco,
-			WR => WR
-		);	
+			POUT => POUT_tb
+		);
+	
 	-- Clock process
 	process
 	begin

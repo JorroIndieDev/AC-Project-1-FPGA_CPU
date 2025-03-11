@@ -4,6 +4,7 @@ vhdl xil_defaultlib  \
 "../../../../Projeto_1_AC_Processador-FPGA.srcs/sources_1/new/ALU.vhd" \
 "../../../../Projeto_1_AC_Processador-FPGA.srcs/sources_1/new/ALU_8bits.vhd" \
 "../../../../Projeto_1_AC_Processador-FPGA.srcs/sources_1/new/CPU.vhd" \
+"../../../../Projeto_1_AC_Processador-FPGA.srcs/sources_1/new/CPU_MB.vhd" \
 "../../../../Projeto_1_AC_Processador-FPGA.srcs/sources_1/new/Flag_Register.vhd" \
 "../../../../Projeto_1_AC_Processador-FPGA.srcs/sources_1/new/MUX_PC.vhd" \
 "../../../../Projeto_1_AC_Processador-FPGA.srcs/sources_1/new/MUX_R.vhd" \
