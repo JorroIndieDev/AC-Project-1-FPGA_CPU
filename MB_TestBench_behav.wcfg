@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="MB_TestBench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="MB_TestBench" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="26.870 ns"></ZoomStartTime>
+      <ZoomEndTime time="158.271 ns"></ZoomEndTime>
+      <Cursor1Time time="110.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="149"></NameColumnWidth>
+      <ValueColumnWidth column_width="73"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="34" />
+   <wvobject fp_name="/MB_TestBench/PIN_tb" type="array">
+      <obj_property name="ElementShortName">PIN_tb[7:0]</obj_property>
+      <obj_property name="ObjectShortName">PIN_tb[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/POUT_tb" type="array">
+      <obj_property name="ElementShortName">POUT_tb[7:0]</obj_property>
+      <obj_property name="ObjectShortName">POUT_tb[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/reset_tb" type="logic">
+      <obj_property name="ElementShortName">reset_tb</obj_property>
+      <obj_property name="ObjectShortName">reset_tb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/clk_tb" type="logic">
+      <obj_property name="ElementShortName">clk_tb</obj_property>
+      <obj_property name="ObjectShortName">clk_tb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/clk_period" type="other">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/UUT/UUT_CPU/PIN" type="array">
+      <obj_property name="ElementShortName">PIN[7:0]</obj_property>
+      <obj_property name="ObjectShortName">PIN[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/UUT/UUT_CPU/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/UUT/UUT_CPU/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/UUT/UUT_CPU/POUT" type="array">
+      <obj_property name="ElementShortName">POUT[7:0]</obj_property>
+      <obj_property name="ObjectShortName">POUT[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/UUT/UUT_CPU/Dados_M" type="array">
+      <obj_property name="ElementShortName">Dados_M[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Dados_M[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/UUT/UUT_CPU/Constante" type="array">
+      <obj_property name="ElementShortName">Constante[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Constante[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/UUT/UUT_CPU/SEL_REG1" type="array">
+      <obj_property name="ElementShortName">SEL_REG1[2:0]</obj_property>
+      <obj_property name="ObjectShortName">SEL_REG1[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/UUT/UUT_CPU/SEL_REG2" type="array">
+      <obj_property name="ElementShortName">SEL_REG2[2:0]</obj_property>
+      <obj_property name="ObjectShortName">SEL_REG2[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/UUT/UUT_CPU/Opcode" type="array">
+      <obj_property name="ElementShortName">Opcode[4:0]</obj_property>
+      <obj_property name="ObjectShortName">Opcode[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/UUT/UUT_CPU/Operando1_out" type="array">
+      <obj_property name="ElementShortName">Operando1_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Operando1_out[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/UUT/UUT_CPU/Endereco" type="array">
+      <obj_property name="ElementShortName">Endereco[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Endereco[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/UUT/UUT_CPU/WR" type="logic">
+      <obj_property name="ElementShortName">WR</obj_property>
+      <obj_property name="ObjectShortName">WR</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/UUT/UUT_CPU/OPERANDO1" type="array">
+      <obj_property name="ElementShortName">OPERANDO1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">OPERANDO1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/UUT/UUT_CPU/OPERANDO2" type="array">
+      <obj_property name="ElementShortName">OPERANDO2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">OPERANDO2[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/UUT/UUT_CPU/RESULTADO_ALU" type="array">
+      <obj_property name="ElementShortName">RESULTADO_ALU[7:0]</obj_property>
+      <obj_property name="ObjectShortName">RESULTADO_ALU[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/UUT/UUT_CPU/Dados_R" type="array">
+      <obj_property name="ElementShortName">Dados_R[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Dados_R[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/UUT/UUT_CPU/Dados_IN" type="array">
+      <obj_property name="ElementShortName">Dados_IN[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Dados_IN[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/UUT/UUT_CPU/COMP_FLAG" type="array">
+      <obj_property name="ElementShortName">COMP_FLAG[4:0]</obj_property>
+      <obj_property name="ObjectShortName">COMP_FLAG[4:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/UUT/UUT_CPU/S_FLAG" type="logic">
+      <obj_property name="ElementShortName">S_FLAG</obj_property>
+      <obj_property name="ObjectShortName">S_FLAG</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/UUT/UUT_CPU/ESCR_PC" type="logic">
+      <obj_property name="ElementShortName">ESCR_PC</obj_property>
+      <obj_property name="ObjectShortName">ESCR_PC</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/UUT/UUT_CPU/ESCR_F" type="logic">
+      <obj_property name="ElementShortName">ESCR_F</obj_property>
+      <obj_property name="ObjectShortName">ESCR_F</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/UUT/UUT_CPU/ESCR_R" type="logic">
+      <obj_property name="ElementShortName">ESCR_R</obj_property>
+      <obj_property name="ObjectShortName">ESCR_R</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/UUT/UUT_CPU/ESCR_P" type="logic">
+      <obj_property name="ElementShortName">ESCR_P</obj_property>
+      <obj_property name="ObjectShortName">ESCR_P</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/UUT/UUT_CPU/SEL_PC" type="array">
+      <obj_property name="ElementShortName">SEL_PC[2:0]</obj_property>
+      <obj_property name="ObjectShortName">SEL_PC[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/UUT/UUT_CPU/SEL_F" type="array">
+      <obj_property name="ElementShortName">SEL_F[2:0]</obj_property>
+      <obj_property name="ObjectShortName">SEL_F[2:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/UUT/UUT_CPU/SEL_ALU" type="array">
+      <obj_property name="ElementShortName">SEL_ALU[3:0]</obj_property>
+      <obj_property name="ObjectShortName">SEL_ALU[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/UUT/UUT_CPU/SEL_R" type="array">
+      <obj_property name="ElementShortName">SEL_R[1:0]</obj_property>
+      <obj_property name="ObjectShortName">SEL_R[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/UUT/UUT_CPU/Flags/COMP_FLAG" type="array">
+      <obj_property name="ElementShortName">COMP_FLAG[4:0]</obj_property>
+      <obj_property name="ObjectShortName">COMP_FLAG[4:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MB_TestBench/UUT/UUT_CPU/RegFile/reg" type="array">
+      <obj_property name="ElementShortName">reg[0:5][7:0]</obj_property>
+      <obj_property name="ObjectShortName">reg[0:5][7:0]</obj_property>
+   </wvobject>
+</wave_config>

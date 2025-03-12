@@ -45,7 +45,7 @@ begin
 	begin
 	
 		-- Load a value into the CPU via PIN
-		PIN_tb <= "00001010";  -- Example: Load value 10
+		PIN_tb <= "11110100";  -- Example: Load value 10
         reset_tb <= '1';
         wait for clk_period * 2;
         reset_tb <= '0';
